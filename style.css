@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+--text-color: white;
+--bg-url: url(./assets/bg-mobile.jpg);
+--stroke-color: rgba(255, 255, 255, 0.5);
+--surface-color: rgba(255, 255, 255, 0.05);
+--surface-color-hover: rgba(0, 0, 0, 0.02);
+--highlight-color: rgba(255, 255, 255, 0.2);
+--switch-bg-url: url(./assets/moon-stars.svg);
+--img-light-url: url(./assets/avatar.png);
+}
+.light{
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.2);
+    --switch-bg-url: url(./assets/sun.svg);
+    --img-light-url: url(./assets/Avatar-2.png);
+}
+.navbar-toggler{
+    background: var(--highlight-color);
+    border: 1px solid var(--stroke-color);
+    font-size: 1.8rem
+}
+.nav-link, .active {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+    font-size: 2.0rem
+}
+.disabled{
+    font-family: "Inter", sans-serif;
+    color:var(--text-color);
+}
+
+body{
+    background: var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: auto;
+
+}
+body * {
+      font-family: "Inter", sans-serif;
+      color: var(--text-color);
+}
+#container{
+    width: 100%;
+    max-width: 100.8rem;
+    margin: 5.6rem auto 0px;
+    padding: 0 2.4rem;
+}
+#profile{
+ 
+    text-align: center;
+    padding: 2.4rem;
+}
+#profile img {
+    width: 22.1rem;
+    
+}
+#profile p {
+ 
+    font-size: 4.0rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    margin-top: 2.4rem;
+margin-bottom: 2.4rem;
+}
+#profile span{
+    font-size: 1.8rem;
+    font-weight: 450;
+    line-height: 2.4rem;
+    padding-top: 2.4rem;
+}
+/*switch*/
+#switch{
+    position: relative;
+    width: 6.4rem;
+    margin: 4px auto;
+}
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: slide-back 0.4s;
+}
+.light #switch button{
+    animation: slide 0.4s forwards;
+    border:  1px solid var(--stroke-color);
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+/* LINKS*/
+#title p{
+    color: var(--text-color);
+   font-size: 4.0rem;
+   font-family: "Inter", sans-serif;
+   font-weight: 500;
+   margin-top: 3.0rem;
+}
+ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 24px 0;
+}
+ul li img{
+    width: 100%;
+    height: 50.0rem;
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+}
+span a{
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+font-size: 1.5rem;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+section{
+   
+    border-top: 5px var(--stroke-color) solid; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 5.0rem;
+    div p{
+        font-family: "Inter", sans-serif;
+        font-size: 3.5rem;  
+    }
+    div h1{
+        margin-top: 5.0rem;
+        font-size: 6.0rem;
+        font-family: "Inter", sans-serif;
+        color: var(--text-color);
+        font-weight: 500;
+        
+    }
+    ul{
+        font-size: 1.8rem;
+        padding-left: 25px;
+        font-family: "Inter", sans-serif;
+        list-style:circle;
+       border-left: var(--text-color) 2px solid;
+    }
+}
+samp{ 
+    
+    display: flex;
+    margin-top: 5.0rem;
+    font-size: 4.5rem;
+    font-family: "Inter", sans-serif;
+    align-items:center; 
+    text-align: center;
+}
+#pf a{
+    text-decoration: none;
+    margin-top: 3.0rem;
+    margin-bottom: 3.0rem;
+    font-size:2.0rem ;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    display: block;
+    align-items:center; 
+    color:var(--text-color);
+}
+aside{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-top: 3.0rem;
+    border-top: 5px var(--stroke-color) solid;
+    border-top-right-radius: 5px;
+    div h1{
+        font-size: 4.0rem;
+        font-family: "Inter", sans-serif;
+        color: var(--text-color);
+    }
+    div p{ 
+        font-size: 1.8rem;
+        font-family: "Inter", sans-serif;
+        color: var(--text-color);
+        display: flex;
+        align-items: end;
+        margin-bottom: 3.0rem;
+
+    }
+}
+span{
+    font-size: 2.5rem;
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+}
+ /* social links*/
+ #social-links{
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 3.0rem;
+    text-align: center;
+ }
+ #social-links a {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 50%;
+    transform: background 0.2s;
+ }
+
+ #social-links a:hover{
+    background: var(--highlight-color);
+ }
+ footer{
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--text-color);
+ }
+
+ /* media querries*/
+
+@media(min-width: 700px){
+    :root{
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+    .light{
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
+/* animação*/
+@keyframes slide{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+@keyframes slide-back{
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
+}
